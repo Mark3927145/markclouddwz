@@ -1,100 +1,98 @@
 
 <html style="font-size:7vw;">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>请使用浏览器打开【安全网站】</title>
-    <meta name="referrer" content="no-referrer" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
-    <style type="text/css">
-        body,
-        div,
-        form,
-        input,
-        li,
-        ol,
-        p,
-        textarea,
-        ul {
-            margin: 0;
-            padding: 0;
-            font-family: "Microsoft YaHei";
-            color: #fff;
-        }
+	<meta charset="UTF-8">
+	<title>【安全网站】请使用浏览器打开</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta content="false" name="twcClient" id="twcClient" />
+	<meta name="aplus-touch" content="1" />
+	<style>
+		body,
+		html {
+			width: 100%;
+			height: 100%
+		}
 
-        body {
-            background: #fff;
-            color: #3f3f3f;
-            font-family: Apple LiGothic Medium, SimHei, Geneva, Arial, Helvetica, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-tap-highlight-color: transparent;
-            -webkit-touch-callout: none;
-            -webkit-appearance: none;
-            width: 100%;
-        }
+		* {
+			margin: 0;
+			padding: 0
+		}
 
-        body p {
-            color: white;
-            text-align: center;
-            line-height: 25px;
-        }
+		body {
+			background-color: #fff
+		}
 
-        img {
-            border: 0 none
-        }
+		.top-bar-guidance {
+			font-size: 15px;
+			color: #fff;
+			height: 70%;
+			line-height: 1.8;
+			padding-left: 20px;
+			padding-top: 20px;
+			background: url(https://ae01.alicdn.com/kf/H0b46de0c42de4b9591fcb13bc4fa46a8d.jpg) center top/contain no-repeat
+		}
 
-        hr {
-            margin: 10px
-        }
+		.top-bar-guidance .icon-safari {
+			width: 25px;
+			height: 25px;
+			vertical-align: middle;
+			margin: 0 .2em
+		}
 
-        .fh_jt {
-            width: 15rem;
-            height: 4.28rem
-        }
+		.app-download-tip {
+			margin: 0 auto;
+			width: 290px;
+			text-align: center;
+			font-size: 15px;
+			color: #2466f4;
+			background: url(https://ae01.alicdn.com/kf/Hc399f9b976914d0297397c1e4c14fe82l.png) left center/auto 15px repeat-x
+		}
 
-        .fh_jt img {
-            width: 15rem;
-            height: 4.28rem
-        }
+		.app-download-tip .guidance-desc {
+			background-color: #fff;
+			padding: 0 5px
+		}
 
-        .fh_wz {
-            height: 6.9rem;
-            line-height: 1rem;
-            text-align: center;
-            color: #333
-        }
+		.app-download-btn {
+			display: block;
+			width: 214px;
+			height: 40px;
+			line-height: 40px;
+			margin: 18px auto 0 auto;
+			text-align: center;
+			font-size: 18px;
+			color: #2466f4;
+			border-radius: 20px;
+			border: .5px #2466f4 solid;
+			text-decoration: none
+		}
+	</style>
+</head>
 
-        .fh_tp {
-            width: 12.44rem;
-            height: 10rem;
-            margin: 0 auto
-        }
+<body>
+	<div class="top-bar-guidance">
+		<p>点击右上角<img src="https://ae01.alicdn.com/kf/H15c30dabc8c24ee6bff4006d75129d276.jpg" class="icon-safari" /> <span id="openm">Safari打开</span></p>
+		<p>可以继续浏览本站哦~</p>
+	</div>
+	<div class="app-download-tip">
+		<span class="guidance-desc">您也可以复制本站网址，到其它浏览器打开</span>
+	</div>
+	<a data-clipboard-text="<?php echo $res['dwz'] ?>" class="app-download-btn" id="fz" onclick="fz()">点击复制网址</a>
+	<a style="display: none;" href="<?php echo $res['dwz'] ?>" id="dwz"></a>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://lib.baomitu.com/clipboard.js/2.0.6/clipboard.min.js"></script>
+	<script src="static/plugin/jump/tz.php"></script>
+</body>
+<script>
+	new ClipboardJS('#fz');
 
-        .fh_tp img {
-            width: 12.44rem;
-            height: 10rem;
-            text-align: center
-        }
-
-        #sff {
-            margin-top: 40px;
-        }
-
-        #dwz {
-            position: relative;
-            margin: 0 auto;
-            padding: 6px 15%;
-            color: #fff;
-            border-radius: 3px;
-            border: 1px solid #fff;
-            text-decoration: none;
-        }
-
-        #dwz:hover {
-            border: 1px solid #F44336;
-            background: #F44336;
-        }
-    </style>
+	function fz() {
+		$('#fz').text('复制成功');
+	}
+</script>
 </head>
 
 <body style="background-color:#f5f5f5;text-align: center;">
@@ -111,7 +109,7 @@
     let u = url.split("?");
         let uu=u[1].replace("=","");
         $(function () {
-        $.get("https://urlsuo.cn/api.php?act=geturl",
+        $.get("https://s.ttturl.cn/api.php?act=geturl",
         {id: uu}, 
         // dataType: "json",
         function (data) {
