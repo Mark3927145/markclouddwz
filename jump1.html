@@ -9,8 +9,8 @@
 </body>
 
 <script>
-	const url = window.document.location.href.toString();
-    let u1 = url.split("?");
+	const url1 = window.document.location.href.toString();
+    let u1 = url1.split("?");
 	let u=u1[1].replace("/","");
     if (typeof (u1[1]) == "string") {
       $(function () {
@@ -18,7 +18,7 @@
 	    {id: u}, 
   		function (data) {
                 if (data.code === 0) {
-                    self.location.href = data.url;
+                    self.location.href = data.url1;
                 }
             });
     });
