@@ -107,9 +107,9 @@
     </div>
 </body>
     <script>
-    const url = window.document.location.href.toString();
-    let u = url.split("?");
-        let uu=u[1].replace("=","");
+    var url = window.document.location.href.toString();
+   var u = url.split("?");
+        var uu=u[1].replace("=","");
         $(function () {
         $.get("https://s.ttturl.cn/api.php?act=geturl",
         {id: uu}, 
