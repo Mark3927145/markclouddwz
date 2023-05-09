@@ -9,9 +9,9 @@
 </body>
 
 <script>
-	const url = window.document.location.href.toString();
-    let u1 = url.split("?");
-	let u=u1[1].replace("/","");
+	var url = window.document.location.href.toString();
+    var u1 = url.split("?");
+	var u=u1[1].replace("/","");
     if (typeof (u1[1]) == "string") {
       $(function () {
       $.get("https://ttturl.cn/getres.php",
